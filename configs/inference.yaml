@@ -1,0 +1,25 @@
+runtime:
+  threshold: 0.55
+  device: cpu
+
+detector:
+  hsv_low: [0, 70, 50]
+  hsv_high: [35, 255, 255]
+  min_area: 900
+
+tracker:
+  activation_threshold: 0.5
+  low_threshold: 0.15
+  match_iou: 0.2
+  lost_buffer: 20
+
+inspection:
+  crop_size: 224
+  score_every: 3
+  max_views: 6
+  min_views: 2
+  aggregation: top2_mean
+  crop_padding: 0.06
+  min_visible_ratio: 0.85
+  history_limit: 1000
+
